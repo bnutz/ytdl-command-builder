@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentCommandBuilder"
+    tools:showIn="@layout/activity_main"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+            app:contentScrim="@android:color/transparent"
+            >
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:visibility="invisible"
+                app:layout_collapseMode="pin"
+                />
+
+            <EditText
+                android:id="@+id/txt_ytdl_command"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colour_option_background"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:gravity="bottom"
+                android:hint="@string/ytdl_command_hint"
+                android:textColorHint="@color/colour_command_hint"
+                android:labelFor="@id/fab_action_command"
+                android:padding="@dimen/cardview_child_margin"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colour_option_text"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                app:layout_collapseMode="pin"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_action_command"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/fab_margin_h"
+        android:layout_marginEnd="@dimen/fab_margin_h"
+        android:layout_marginTop="@dimen/fab_margin_v"
+        app:srcCompat="@drawable/ic_content_copy_white"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_anchorGravity="right|end"
+        />
+
+    <!-- ViewPager holding the Options List and Saved Commands List (https://stackoverflow.com/a/18710611) -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_command_toolbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_command_ytdl_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+
+            android:background="@color/colour_option_list_background"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_saved_presets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+
+            android:background="@color/colour_preset_list_background"
+            />
+
+    </android.support.v4.view.ViewPager>
+
+    <!-- Custom DragShadow overlay - nesting inside FrameLayout so we can restrict movement by adjusting margins (https://stackoverflow.com/a/27824866) -->
+    <FrameLayout
+        android:id="@+id/frame_dragshadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <!-- FrameLayout properties need to match the corresponding ViewPager property (the main child of this Fragment), so can properly calculate DragShadow position-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/cardview_no_radius"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            >
+            <TextView
+                android:id="@+id/lbl_dragshadow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/cardview_child_margin"
+                android:background="@color/colour_dragshadow_background"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colour_option_text"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                />
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+    <SearchView
+        android:id="@+id/searchview_option_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colour_search_list_background"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_options_hint"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

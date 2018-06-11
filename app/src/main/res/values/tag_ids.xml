@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_id_cmd_switch" />
+
+    <item type="id" name="tag_id_tab_update_indicator_only" />
+    <item type="id" name="tag_id_tab_howto" />
+    <item type="id" name="tag_id_tab_search" />
+    <item type="id" name="tag_id_tab_command_edit" />
+    <item type="id" name="tag_id_tab_command_preset" />
+    <item type="id" name="tag_id_tab_settings" />
+
+    <item type="id" name="tag_id_fab_action_copy" />
+
+    <item type="id" name="tag_id_searchview_visible" />
+</resources>

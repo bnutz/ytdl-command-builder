@@ -1,0 +1,66 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="NewApi"
+    >
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="ic_expand_toggle_anim"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="collapsed_left"
+                android:pathData="M 7.41 8.59 L 6 10 L 12 16 L 12 13.17 Z"
+                android:fillColor="#ffffff"/>
+            <path
+                android:name="collapsed_right"
+                android:pathData="M 16.59 8.59 L 18 10 L 12 16 L 12 13.17 Z"
+                android:fillColor="#ffffff"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="collapsed_left">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:duration="@integer/avd_anim_time"
+                    android:valueFrom="M 7.41 8.59 L 6 10 L 12 16 L 12 13.17 Z"
+                    android:valueTo="M 7.41 12.59 L 6 14 L 7.41 15.41 L 8.82 14 Z"
+                    android:valueType="pathType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/avd_anim_time"
+                    android:duration="@integer/avd_anim_time"
+                    android:valueFrom="M 7.41 12.59 L 6 14 L 7.41 15.41 L 8.82 14 Z"
+                    android:valueTo="M 12 8 L 6 14 L 7.41 15.41 L 12 10.83 Z"
+                    android:valueType="pathType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="collapsed_right">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:duration="@integer/avd_anim_time"
+                    android:valueFrom="M 16.59 8.59 L 18 10 L 12 16 L 12 13.17 Z"
+                    android:valueTo="M 16.59 12.59 L 18 14 L 16.59 15.41 L 15.18 14 Z"
+                    android:valueType="pathType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/avd_anim_time"
+                    android:duration="@integer/avd_anim_time"
+                    android:valueFrom="M 16.59 12.59 L 18 14 L 16.59 15.41 L 15.18 14 Z"
+                    android:valueTo="M 12 8 L 18 14 L 16.59 15.41 L 12 10.83 Z"
+                    android:valueType="pathType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

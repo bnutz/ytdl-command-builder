@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    >
+    <!-- Fill in the gaps to make sure background colour is consistent (not ideal, but dunno how else to do this right now)  -->
+    <View
+        android:id="@+id/view_ytdl_preset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colour_decription_background"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_copy_preset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/img_copy_preset"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/lbl_copy_command"
+        android:padding="@dimen/copy_button_margin"
+        android:background="@color/colour_option_background"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_content_copy_black"
+        app:layout_constraintHeight_min="wrap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="RtlSymmetry"
+        />
+
+    <TextView
+        android:id="@+id/txt_ytdl_preset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/cardview_child_margin"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textStyle="bold"
+        android:textColor="@color/colour_option_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:typeface="monospace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_copy_preset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <!-- Fancy cornering -->
+    <ImageView
+        android:id="@+id/img_corner_snip"
+        android:layout_width="@dimen/copy_button_margin"
+        android:layout_height="@dimen/copy_button_margin"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/corner_snip"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>

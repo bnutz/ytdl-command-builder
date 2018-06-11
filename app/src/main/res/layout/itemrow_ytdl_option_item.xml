@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/cardview_no_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    >
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!-- Control the column widths -->
+        <android.support.constraint.Guideline
+            android:id="@+id/constraint_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33"
+            />
+
+        <!-- Fill in the gaps to make sure background colour is consistent (not ideal, but dunno how else to do this right now)  -->
+        <View
+            android:id="@+id/back_ytdl_option_flag"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colour_option_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/constraint_guideline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <View
+            android:id="@+id/back_ytdl_option_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colour_decription_background"
+            app:layout_constraintStart_toEndOf="@id/constraint_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <!-- Actual content -->
+        <TextView
+            android:id="@+id/txt_ytdl_option_flag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/cardview_child_margin"
+            android:textStyle="bold"
+            android:textColor="@color/colour_option_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:typeface="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/constraint_guideline"
+            />
+        <TextView
+            android:id="@+id/txt_ytdl_option_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/cardview_child_margin"
+            android:textColor="@color/colour_decription_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toEndOf="@id/constraint_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/img_option_drag_handle"
+            />
+
+        <!-- Action handle -->
+        <ImageView
+            android:id="@+id/img_option_drag_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/cardview_child_margin"
+            android:paddingBottom="@dimen/cardview_child_margin"
+            android:contentDescription="@string/lbl_option_drag_handle"
+            app:srcCompat="@drawable/ic_more_vert_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

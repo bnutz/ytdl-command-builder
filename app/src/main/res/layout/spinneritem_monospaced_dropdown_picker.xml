@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colour_header_background"
+    tools:ignore="RtlSymmetry"
+    >
+    <TextView
+        android:id="@+id/lbl_monospace_dropdown_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:paddingStart="@dimen/cardview_child_margin"
+        android:paddingLeft="@dimen/cardview_child_margin"
+        android:background="@color/colour_decription_background"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/colour_option_text"
+        android:typeface="monospace"
+        />
+</LinearLayout>

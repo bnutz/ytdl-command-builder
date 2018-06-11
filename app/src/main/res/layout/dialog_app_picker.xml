@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="?attr/dialogPreferredPadding"
+    android:paddingLeft="?attr/dialogPreferredPadding"
+    android:paddingEnd="?attr/dialogPreferredPadding"
+    android:paddingRight="?attr/dialogPreferredPadding"
+    >
+    <TextView
+        android:id="@+id/lbl_app_list_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical|end"
+        android:maxLines="1"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:text="@string/app_picker_loading"
+        android:textColor="@color/colour_option_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <Spinner
+        android:id="@+id/spinner_app_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:listitem="@layout/spinneritem_basic_dropdown_picker"
+        />
+    <EditText
+        android:id="@+id/edit_txt_app_picker_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/app_picker_hint"
+        android:inputType="textNoSuggestions"
+        android:maxLines="1"
+        android:textColor="@color/colour_option_text"
+        />
+</LinearLayout>

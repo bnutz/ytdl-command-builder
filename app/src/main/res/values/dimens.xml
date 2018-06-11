@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="appbar_height">150dp</dimen>
+    <dimen name="fab_margin_v">104dp</dimen>
+    <dimen name="fab_margin_h">16dp</dimen>
+    <!-- fab_margin_v = (appbar_height - fab_height (56dp) + 10dp (for some overlap))-->
+
+
+
+    <dimen name="cardview_no_radius">0dp</dimen>
+    <dimen name="cardview_child_margin">8dp</dimen>
+
+    <dimen name="howto_radius">2dp</dimen>
+    <dimen name="howto_margin">8dp</dimen>
+    <dimen name="howto_padding_vertical">8dp</dimen>
+    <dimen name="howto_padding_horizontal">16dp</dimen>
+
+    <dimen name="copy_button_size">56dp</dimen>
+    <dimen name="copy_button_margin">16dp</dimen>
+
+    <integer name="avd_anim_time">300</integer>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">About</string>
+
+    <string name="about_version">Version</string>
+    <string name="about_contact_title">Tweet</string>
+    <string name="about_contact_twitter">\u0040Brian_Nutz</string>
+    <string name="about_contact_playstore">Check out my other apps</string>
+
+    <string name="about_privacy_title">Privacy Policy</string>
+    <string name="about_licences_title">Libraries &amp; Licences</string>
+
+    <string name="about_link_version">https://github.com/bnutz/ytdl-command-builder</string>
+    <string name="about_link_contact">https://twitter.com/brian_nutz/</string>
+    <string name="about_link_privacy">https://bnutz.github.io/justbnutz/privacy_policy</string>
+    <string name="about_link_playstore">https://play.google.com/store/apps/developer?id=just.B.Nutz</string>
+</resources>

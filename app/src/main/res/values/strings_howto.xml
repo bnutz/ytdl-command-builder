@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Links -->
+    <string name="link_termux">
+        <a href="https://termux.com/">Termux</a>
+    </string>
+    <string name="link_ytdl">
+        <a href="http://rg3.github.io/youtube-dl/">youtube-dl</a>
+    </string>
+
+    <!-- Intro Section -->
+    <string name="howto_header">What Is This?</string>
+    <string name="howto_intro">YTDL Command Builder is an app that aims to help you install and use the youtube-dl command line app on your Android device.
+        With YTDL Command Builder you can easily search through all the available options and save frequently-used commands for easier access and minimal typing.</string>
+    <string name="howto_disclaimer"><b>Note:</b>
+        \nYTDL Command Builder does not do any downloading or logic by itself, and is not associated or affiliated with the folks working on youtube-dl or Termux.
+        \nI\'m just a huge fan of their work. \\(^_^)/
+    </string>
+
+    <!-- Steps -->
+    <string name="howto_step1_header">Step 1</string>
+    <string name="howto_step1">Download and install a command line environment app (Termux)</string>
+    <string name="howto_step1_command"><![CDATA[
+        https://play.google.com/store/apps/details?id=com.termux
+    ]]></string>
+
+    <string name="howto_step2_header">Step 2</string>
+    <string name="howto_step2">(Run these commands within the command line environment)\nUpdate all packages</string>
+    <string name="howto_step2_command"><![CDATA[
+        apt update && apt -y upgrade
+    ]]></string>
+
+    <string name="howto_step3_header">Step 3</string>
+    <string name="howto_step3">Install Python</string>
+    <string name="howto_step3_command"><![CDATA[
+        pkg install -y python
+    ]]></string>
+
+    <string name="howto_step4_header">Step 4</string>
+    <string name="howto_step4">Install youtube-dl</string>
+    <string name="howto_step4_command"><![CDATA[
+        yes | pip install youtube-dl
+    ]]></string>
+
+    <string name="howto_step5_header">Step 5</string>
+    <string name="howto_step5">Allow Termux to be able to see your Android device storage folders. This will allow media players like VLC to see the downloaded files.\nOnce the permission is granted, the Android folders will be seen under the path: <b>~/storage/</b></string>
+    <string name="howto_step5_command"><![CDATA[
+        termux-setup-storage
+    ]]></string>
+
+    <string name="howto_step6_header">Ready!</string>
+    <string name="howto_step6">youtube-dl is now set up and ready to download any supported file directly onto your device.</string>
+    <string name="howto_step6_edit_intro">Use YTDL Command Builder to configure the downloads to exactly how you like by dragging the options into the command box and copying the commands over to the command line.</string>
+    <string name="howto_step6_preset_intro">Use the preset function to save frequently-used commands.</string>
+
+    <string name="howto_extra_tips_header">Extras</string>
+    <string name="howto_extra_tips">Share URLs directly into YTDL Command Builder to easily set up a youtube-dl command around that link.
+        \n
+        \n<b>Links</b>
+        \n- <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a>
+        \n- <a href="https://termux.com/">Termux</a>
+        \n
+        \n<b>Advanced</b>
+        \nAdditional tips to make your youtube-dl + Android experience more seamless:
+        \n- <a href="https://www.reddit.com/r/linux/comments/66fh4f/what_do_you_use_termux_on_android_for/dgj42pe">Two-click downloading trick (reddit.com)</a>
+        \n- <a href="https://pastebin.com/raw/W1nvzN6q">Termux-url-opener method (pastebin.com)</a>
+    </string>
+</resources>

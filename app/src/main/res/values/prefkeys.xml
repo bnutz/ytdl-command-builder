@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prefkey_preset_list">prefkey_preset_list</string>
+
+    <string name="prefkey_about_version">prefkey_about_version</string>
+    <string name="prefkey_about_contact">prefkey_about_contact</string>
+    <string name="prefkey_about_playstore">prefkey_about_playstore</string>
+    <string name="prefkey_about_privacy">prefkey_about_privacy</string>
+    <string name="prefkey_about_licences">prefkey_about_licences</string>
+
+    <string name="prefkey_start_tab">prefkey_start_tab</string>
+
+    <string name="prefkey_text_size">prefkey_text_size</string>
+
+    <string name="prefkey_cmd_app">prefkey_cmd_app</string>
+    <string name="prefkey_cmd_app_default">com.termux</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>                  <!-- Indigo 500 -->
+    <color name="colorPrimaryDark">#303F9F</color>              <!-- Indigo 700 -->
+    <color name="colorAccent">#FF4081</color>                   <!-- Pink A200 -->
+
+    <color name="colour_option_list_background">#f5f5f5</color> <!--- Grey 100 -->
+    <color name="colour_preset_list_background">#81d4fa</color> <!-- LightBlue 200 -->
+    <color name="colour_search_list_background">#eceff1</color> <!-- BlueGrey 50 -->
+
+    <color name="colour_header_background">#78909c</color>      <!-- BlueGrey 400 -->
+    <color name="colour_header_text">#ffffff</color>
+    <color name="colour_option_background">#e0e0e0</color>      <!-- Grey 300 -->
+    <color name="colour_option_text">#212121</color>
+    <color name="colour_decription_background">#eeeeee</color>  <!-- Grey 200 -->
+    <color name="colour_decription_text">#212121</color>
+
+    <color name="colour_command_hint">#bdbdbd</color>           <!-- Grey 400 -->
+    <color name="colour_dragshadow_background">#9e9e9e</color>  <!-- Grey 500 -->
+</resources>
