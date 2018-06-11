@@ -19,7 +19,7 @@ I'm just a huge fan of their work. \\(^_^)/
 
 ### Download ###
 
-* Download the APK [here](app/release/)
+* Download the APK [here](https://github.com/bnutz/ytdl-command-builder/releases)
 
 
 ### Screenshots ###
